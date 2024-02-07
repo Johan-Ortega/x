@@ -1,0 +1,388 @@
+:root{
+   --blanco: #ffffff;
+   --oscuro: #212121;
+   --primario: #FFC107;
+   --secundario: #0096a7;
+   --gris: #666464;
+   --grisClaro: #DFE9F3;
+}
+
+/* Globales */
+
+html{
+   font-size: 62.5%;
+   box-sizing: border-box;
+   scroll-snap-type: y mandatory;
+}
+
+/* Scroll Snap */
+
+/* .servicios,
+.navegacion-principal,
+.formulario{
+   scroll-snap-align: center;
+   scroll-snap-stop: always;
+} */
+
+*, *:before, *:after{
+   box-sizing: inherit;
+}
+
+body{
+   font-size: 16px;                                         /*1rem = 10px*/
+   font-family: 'Krub', sans-serif;
+   background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+}
+
+.contenedor{
+   max-width: 120rem;
+   margin: 0 auto;
+}
+
+.boton{
+   background-color: var(--secundario);
+   color: var(--blanco);
+   padding: 1rem 3rem;
+   margin-top: 2rem;
+   font-size: 1.5rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bold;
+   border-radius: .5rem;
+   width: 90%;
+   text-align: center;
+   border: none;
+   display: flex;
+   align-items: center;
+   margin: 3rem auto;
+}
+
+@media (min-width: 768px){
+   .boton{
+      width: auto;
+   }
+}
+
+.boton:hover{
+   cursor: pointer;
+}
+
+.sombra{
+   box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.48);
+   background-color: var(--blanco);
+   padding: 1.8rem;
+   margin-bottom: 2rem;
+}
+
+/* Tipografia */
+
+h1{
+   font-size: 3rem;
+   color: var(--blanco);
+}
+
+h2{
+   font-size: 2.2rem;
+}
+
+h3{
+   font-size: 1.5rem;
+}
+
+h1, h2, h3{
+   text-align: center;
+}
+
+/* Titulos */
+
+.titulo span{
+   font-size: 1.7rem;
+}
+
+/* Utilidades */
+.w-sm-100{
+   width: 100%;
+}
+
+@media (min-width:768px){
+   .w-sm-100{
+      width: auto;
+   }
+}
+
+.flex{
+   display: flex;
+}
+
+.alinear-derecha{
+   justify-content: flex-end;
+}
+
+/* Navegacion principal */
+.navegacion-principal{
+   display: flex;
+   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+   .navegacion-principal{
+      gap: 5rem;
+      flex-direction: row;
+      justify-content: space-between;
+   }
+}
+
+.navegacion-principal a{
+   color: var(--blanco);
+   text-decoration: none;
+   font-size: 1.7rem;
+   font-weight: 700;
+   padding: 1rem;
+}
+
+/* Hero */
+
+.hero{
+   background-image: url(../img/hero.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 42rem;
+   position: relative;
+   margin-bottom: 1.8rem;
+}
+
+.contenido-hero{
+   position: absolute;
+   background-color: rgba(0, 0, 0, .55);
+   width: 100%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+   color: var(--blanco);
+}
+
+.contenido-hero .ubicacion{
+   display: flex;
+   align-items: flex-end;
+}
+
+/* Servicios */
+
+@media (min-width: 768px){
+   .servicios{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+   }
+}
+
+.servicio{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.servicio h3{
+   color: var(--secundario);
+   font-weight: normal;
+}
+
+.servicio p{
+   line-height: 2;
+   font-weight: normal;
+}
+
+.servicio p span{
+   font-weight: bold;
+}
+
+.servicio .iconos{
+   height: 15rem;
+   width: 15rem;
+   background-color: var(--primario);
+   border-radius: 50%;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+/* Contacto.html */
+
+.contacto{
+   background-color: darkslategrey;
+   color: var(--blanco);
+   padding: 2rem 0;
+}
+
+.contacto2{
+   display: flex;
+   flex-direction: row;
+}
+
+.inf{
+   background-color: var(--blanco);
+   color: var(--oscuro);
+   border-radius: 5px;
+   padding: 0.5rem 7rem;
+   margin: 1rem auto;
+}
+
+.inf img{
+   width: 4rem;
+   height: auto;
+   display: flex;
+   margin: auto;
+}
+
+.inf p,h3{
+   align-content: center;
+}
+
+.inf a{
+   text-decoration: none;
+}
+
+@media (max-width: 800px){
+   .contacto2{
+      flex-direction: column;
+   }
+   .inf{
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 3rem;
+   }
+   .inf p,h3,a{
+      display: flex;
+      justify-content: center;
+
+   }
+}
+
+@media (max-width: 650px){
+   .inf{
+      width: 90%;
+   }
+}
+
+/* sobre-mi.html*/
+
+.sobremi{
+   width: 70%;
+   margin: auto;                    /* Justificacion del texto, tamaño de la caja de texto y centrado de las mismas*/
+   text-align: justify;
+}
+
+.smp{
+   background-color: #EEEEEE ;      /* Cajas de texto */
+   opacity: 90%;
+   padding: 2rem;
+   border-radius: 25px;
+   line-height: 2.8rem;
+}
+
+.misproyectos img{
+   width: auto;
+   height: 20rem;
+   margin-bottom: 1rem;
+}
+
+.misproyectos .boton2{
+   background-color: var(--secundario);
+   color: var(--blanco);
+   padding: 1rem 3rem;
+   font-size: 1.5rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: bold;
+   border-radius: .5rem;
+   width: 20%;
+   text-align: center;
+   border: none;
+
+   display: flex;
+   justify-content: center;
+   margin: 2rem auto;
+}
+
+.proyectos{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.misproyectos h3{
+   background-color: var(--primario);
+   padding: 5px;
+}
+
+@media (max-width: 1140px){
+   .proyectos{
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width: 800px){
+   .proyectos{
+      grid-template-columns: repeat(1, 1fr);
+   }
+}
+
+@media (max-width: 400px){
+   .misproyectos img{
+      height: 15rem;
+   }
+}
+
+/* index.html tecnologias */
+hr{
+   margin-top: 5rem;
+   opacity: 30%;
+}
+
+.tecnologias h2{
+   padding: 3rem;
+}
+
+.tecnologias img{
+   height: 12rem;
+   width: auto;
+   margin: auto;
+}
+
+.frameworks{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   margin: auto 15% 5rem;
+}
+
+.img{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: auto;
+}
+
+@media (max-width: 768px){
+   .img{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+   }
+   .tecnologias img{
+      height: 8rem;
+   }
+}
+
+/* Footer */
+.footer{
+   text-align: center;
+}
