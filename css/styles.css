@@ -304,7 +304,8 @@ h1, h2, h3{
    text-transform: uppercase;
    font-weight: bold;
    border-radius: .5rem;
-   width: 20%;
+   width: auto;
+   max-width: 25rem;
    text-align: center;
    border: none;
 
@@ -352,9 +353,10 @@ hr{
 }
 
 .tecnologias img{
-   height: 12rem;
+   height: 15rem;
    width: auto;
    margin: auto;
+   padding: 1.5rem;
 }
 
 .frameworks{
@@ -364,6 +366,17 @@ hr{
    margin: auto 15% 5rem;
 }
 
+.frameworks img{
+   height: 15rem;
+   width: auto;
+   padding: 1rem;
+}
+
+.frameworks .tailwind{
+   height: 7rem;
+   width: auto;
+}
+
 .img{
    display: flex;
    flex-direction: row;
@@ -371,14 +384,58 @@ hr{
    margin: auto;
 }
 
+@media (max-width: 1183px){
+   .img{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem;
+   }
+   .tecnologias img{
+      height: 12rem;
+   }
+   .frameworks .tailwind{
+      width: 25rem;
+      height: auto;
+   }
+}
+
 @media (max-width: 768px){
    .img{
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .tecnologias .frameworks{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2rem;
    }
-   .tecnologias img{
-      height: 8rem;
+
+   img{
+      height: 9rem;
+      width: auto;
+   }
+
+   .frameworks .tailwind{
+      grid-column: 3/3;
+   }
+}
+
+@media (max-width: 530px){
+   .frameworks .tailwind{
+      margin-top: 2rem;
+      grid-column: span 2;
+   }
+}
+
+@media (max-width: 420px){
+   .img{
+      display: flex;
+      flex-direction: column;
+   }
+
+   .tecnologias .frameworks{
+      display: flex;
+      flex-direction: column;
    }
 }
 
