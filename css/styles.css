@@ -176,6 +176,8 @@ h1, h2, h3{
 
 .servicios{
    width: 85%;
+   margin: auto;
+   text-align: center;
 }
 
 @media (min-width: 768px){
@@ -356,8 +358,10 @@ a p{
    border-radius: 20px;
    line-height: 2.8rem;
    width: 75%;
+   
    margin: 2rem auto;
 }
+
 
 .misproyectos{
    display: flex;
@@ -419,6 +423,12 @@ a p{
 @media (max-width: 1140px){
    .proyectos{
       grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media (max-width: 768px){
+   a .smp{
+      min-width: 75%;
+      height: fit-content;
    }
 }
 
