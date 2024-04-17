@@ -357,11 +357,16 @@ a p{
    padding: 2rem;
    border-radius: 20px;
    line-height: 2.8rem;
-   width: 75%;
+   width: 80%;
    
    margin: 2rem auto;
 }
 
+@media (max-width: 900px){
+   .sobremi .smp{
+      width: 100%;
+   }
+}
 
 .misproyectos{
    display: flex;
@@ -384,6 +389,7 @@ a p{
 .card{         /*    Tarjeta de cada proyecto   */
    width: 60%;
    height: 40rem;
+   min-width: 50rem;
    background-size: cover;
    background-repeat: no-repeat;
    margin: auto;
@@ -405,6 +411,10 @@ a p{
    height: auto;
    border-radius: 40px;
  }
+
+ .cripto, .gastos, .pacientes, .bienes, .bienesphp{
+   background-position: center;
+}
 
 .proyectos{
    display: grid;
