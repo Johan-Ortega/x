@@ -17,10 +17,9 @@ html{
 
 /* Scroll Snap */
 
-/* .servicios,
-.navegacion-principal,
-.formulario{
-   scroll-snap-align: center;
+/* #1,#2,#3,#4,#5,#6,#7,#8,#9,#10,
+#11{
+   scroll-snap-align: start;
    scroll-snap-stop: always;
 } */
 
@@ -43,7 +42,6 @@ body{
    background-color: var(--secundario);
    color: var(--blanco);
    padding: 1rem 3rem;
-   margin-top: 2rem;
    font-size: 1.5rem;
    text-decoration: none;
    text-transform: uppercase;
@@ -54,6 +52,7 @@ body{
    border: none;
    display: flex;
    align-items: center;
+   justify-content: center;
    margin: 3rem auto;
 }
 
@@ -175,11 +174,16 @@ h1, h2, h3{
 
 /* Servicios */
 
+.servicios{
+   width: 85%;
+}
+
 @media (min-width: 768px){
    .servicios{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 2rem;
+      margin: auto;
    }
 }
 
@@ -232,6 +236,7 @@ h1, h2, h3{
    border-radius: 5px;
    padding: 0.5rem 7rem;
    margin: 1rem auto;
+   max-width: 43rem;
 }
 
 .inf img{
@@ -274,19 +279,96 @@ h1, h2, h3{
 }
 
 /* sobre-mi.html*/
-
 .sobremi{
-   width: 70%;
+   width: 75%;
    margin: auto;                    /* Justificacion del texto, tamaño de la caja de texto y centrado de las mismas*/
    text-align: justify;
 }
 
+/* Imagenes de cada proyecto  */
+.guitarla{
+   margin-top: 3rem;
+   background-image: url(../img/GuitarLA.webp);
+}
+.cripto{
+   background-image: url(../img/CotizaCripto.webp);
+}
+.gastos{
+   background-image: url(../img/ControlGastos.webp);
+}
+.pacientes{
+   background-image: url(../img/AdminPacientes.webp);
+}
+.clima{
+   background-image: url(../img/BuscaClima.webp);
+}
+.bebidas{
+   background-image: url(../img/BuscaBebidas.webp);
+}
+.bienes{
+   background-image: url(../img/bienes-raices.webp);
+}
+.pos{
+   background-image: url(../img/pos-vue.webp);
+   margin-bottom: 5rem;
+}
+.bienesphp{
+   margin-top: 3rem;
+   background-image: url(../img/bienes-raices-php.webp);
+}
+.appsalon{
+   background-image: url(../img/appsalon.webp);
+}
+.tareas{
+   background-image: url(../img/AdminTareas.webp);
+   margin-bottom: 3rem;
+}
+
+/* Texto con redireccion a las aplicaciones web */
+.card a{
+   max-height: 90%;
+   opacity: 0;
+   color: var(--oscuro);
+   text-decoration: none;
+   cursor: pointer;
+
+   z-index: 1;
+   transition: bottom 0.3s, opacity 0.6s cubic-bezier(0.33, 0.66, 0.66, 1);
+}
+
+.card a:hover{
+   opacity: 90%;
+   overflow-y: scroll;
+}
+
+a p{
+   border: 1px solid var(--secundario);
+}
+
+.card a::-webkit-scrollbar{
+   display: none;
+}
+
+/* Cajas de texto en general  */
 .smp{
    background-color: #EEEEEE ;      /* Cajas de texto */
-   opacity: 90%;
    padding: 2rem;
-   border-radius: 25px;
+   border-radius: 20px;
    line-height: 2.8rem;
+   width: 75%;
+   margin: 2rem auto;
+}
+
+.misproyectos{
+   display: flex;
+   gap: 6rem;
+
+   overflow-x: auto;
+   scroll-snap-type: x mandatory;
+}
+
+.misproyectos::-webkit-scrollbar{
+   display: none;
 }
 
 .misproyectos img{
@@ -295,33 +377,43 @@ h1, h2, h3{
    margin-bottom: 1rem;
 }
 
-.misproyectos .boton2{
-   background-color: var(--secundario);
-   color: var(--blanco);
-   padding: 1rem 3rem;
-   font-size: 1.5rem;
-   text-decoration: none;
-   text-transform: uppercase;
-   font-weight: bold;
-   border-radius: .5rem;
-   width: auto;
-   max-width: 25rem;
-   text-align: center;
-   border: none;
-
+.card{         /*    Tarjeta de cada proyecto   */
+   width: 60%;
+   height: 40rem;
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: auto;
    display: flex;
    justify-content: center;
-   margin: 2rem auto;
+   align-items: center;
+   border: 2px solid var(--grisClaro);
+   border-radius: 40px;
+
+   scroll-snap-align: center;
 }
+
+ .card a, .card img{
+   width: 70rem;
+   overflow-y: hidden;
+ }
+
+ .card img{
+   height: auto;
+   border-radius: 40px;
+ }
 
 .proyectos{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
+   gap: 2rem;
+   margin-top: 2rem;
 }
 
-.misproyectos h3{
+.amarillo{
    background-color: var(--primario);
    padding: 5px;
+   margin-top: 5rem;
+   margin-bottom: 3rem;
 }
 
 @media (max-width: 1140px){
