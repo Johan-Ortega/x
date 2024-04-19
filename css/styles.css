@@ -376,10 +376,6 @@ a p{
    scroll-snap-type: x mandatory;
 }
 
-.misproyectos::-webkit-scrollbar{
-   display: none;
-}
-
 .misproyectos img{
    width: auto;
    height: 20rem;
@@ -387,12 +383,11 @@ a p{
 }
 
 .card{         /*    Tarjeta de cada proyecto   */
-   width: 60%;
-   height: 40rem;
-   min-width: 50rem;
+   height: 35rem;
+   min-width: 55rem;
    background-size: cover;
    background-repeat: no-repeat;
-   margin: auto;
+   margin: auto auto 3rem auto;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -400,6 +395,13 @@ a p{
    border-radius: 40px;
 
    scroll-snap-align: center;
+}
+
+@media (max-width: 900px){
+   .card{
+      min-width: 37rem;
+      height: 30rem;
+   }
 }
 
  .card a, .card img{
@@ -412,7 +414,7 @@ a p{
    border-radius: 40px;
  }
 
- .cripto, .gastos, .pacientes, .bienes, .bienesphp{
+ .cripto, .gastos, .pacientes, .bienes, .bienesphp, .appsalon{
    background-position: center;
 }
 
@@ -426,7 +428,7 @@ a p{
 .amarillo{
    background-color: var(--primario);
    padding: 5px;
-   margin-top: 5rem;
+   margin-top: 3rem;
    margin-bottom: 3rem;
 }
 
